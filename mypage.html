@@ -21,39 +21,78 @@
                     </ul>
                  </div>
            </nav>
+           
+           <img src="images/mobile.png" class="mobile">
           <div class="information">
+            <div class="overlay"></div>
+          
+            
+         
+
             <div id="circle">
+              
                <div class="feature one">
                    <img src="images/camera.png">
                <div>
                    <h1>Camera</h1>
-                   <p>12MP,Wide Angle Lens</p>
+                   <p>48MP, Wide Angle Lens</p>
                    </div>
                </div>
                <div class="feature two">
                    <img src="images/processor.png">
                    <div>
                     <h1>Processor</h1>
-                    <p>intel</p>
+                    <p>Intel 4-Core</p>
                    </div>
                </div>
 
                <div class="feature three">
                    <img src="images/display.png">
                    <div>
-                    <h1>good</h1>
-                    <p>13</p>
+                    <h1>Display</h1>
+                    <p>6.5"Mini-Drop Fullscreen</p>
                    </div>
                </div>
                
                <div class="feature four">
                 <img src="images/battery.png">
-                <h1>bettery saver</h1>
-                    <p>62565</p>
+                <div>
+                <h1>Battery Life</h1>
+                    <p>6000mAh,752Hrs Standby</p>
+                </div>
                </div>
               </div>
             </div>
         </div>
-    
+        <div class="controls">
+            <img src="images/arrow.png" id="upbtn">
+            <h3>Features</h3>
+            <img src="images/arrow.png" id="downbtn">
+
+        </div>
+    </div>
+    <script>
+        var circle = document.getElementById("circle");
+        var upbtn = document.getElementById("upbtn");
+        var downbtn = document.getElementById("downbtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upbtn.onclick=function(){
+            rotateSum=rotateValue+"rotate(-90deg)";
+            circle.style.transform= rotateSum ;
+
+            rotateValue=rotateSum;
+
+        }
+         downbtn.onclick=function(){
+            rotateSum=rotateValue+"rotate(90deg)";
+            circle.style.transform= rotateSum ;
+
+            rotateValue=rotateSum;
+
+        }
+    </script>
     </body>
 </html>
